@@ -27,6 +27,7 @@ public  class drawing extends JPanel implements MouseListener, MouseMotionListen
     public static JTextArea textEditor;
     String currentText;
     boolean isMousePressed = false;
+    boolean isMouse = true;
 	public static Stroke stroke;
 	public static int strokeValue;
 	
