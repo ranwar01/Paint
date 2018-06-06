@@ -6,10 +6,10 @@ import javax.swing.JFrame;
 
 import javax.swing.JPanel;
 
-public class mainPaint extends JFrame  {
-		drawing drawPanels;
+public class MainPaint extends JFrame  {
+		Drawing drawPanels;
 
-	public mainPaint (){
+	public MainPaint (){
 		JPanel mainPanel = new JPanel();
 //		mainPanel.a
 		this.requestFocus();
@@ -20,10 +20,10 @@ public class mainPaint extends JFrame  {
 	
 		mainPanel.add(jPanelMenu,BorderLayout.PAGE_START);
 				
-		leftButtonPanel buttons = new leftButtonPanel();
+		LeftPanel buttons = new LeftPanel();
 		mainPanel.add(buttons,BorderLayout.LINE_START);
 		
-		drawPanels = new drawing();
+		drawPanels = new Drawing();
 		mainPanel.add(drawPanels,BorderLayout.CENTER);
 		
 
@@ -45,7 +45,7 @@ public class mainPaint extends JFrame  {
 		javax.swing.SwingUtilities.invokeLater(new Runnable(){
 			public void run(){
 				
-				 mainPaint p =   new mainPaint();
+				 MainPaint p =   new MainPaint();
 				
 			}
 		});

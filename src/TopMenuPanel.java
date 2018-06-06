@@ -28,7 +28,7 @@ public class TopMenuPanel extends JPanel implements ActionListener, ItemListener
 	 public final static String [] shapeNames = {"Clear", "Background", "Change", "Color"};
 	 public JButton [] topPanelButtons;
 	 String [] setFonts = {"Serif", "SansSerif", "Monospaced","Dialog", "DialogInput"};
-	 static drawing draw;
+	 static Drawing draw;
 	public JSlider textSize;
 	 
 	 
@@ -88,14 +88,14 @@ public class TopMenuPanel extends JPanel implements ActionListener, ItemListener
 			Color c = JColorChooser.showDialog(null, "Choose a Color", label.getForeground());
 		      if (c != null)
 		        label.setForeground(c);
-		      drawing.setColor(c);
-		      topPanelButtons[3].setBackground(drawing.getColor());
-		      drawing.textEditor.setForeground(c);
+		      Drawing.setColor(c);
+		      topPanelButtons[3].setBackground(Drawing.getColor());
+		      Drawing.textEditor.setForeground(c);
 			}
 			
 			else if (e.getActionCommand()== "Clear"){
-				drawing.textEditor.setText("");
-				drawing.setCurrentShape(null);
+				Drawing.textEditor.setText("");
+				Drawing.setCurrentShape(null);
 			}	
 //			else if (e.getSource()== fontSize){
 //				String x = fontSize.getText();
@@ -134,7 +134,7 @@ public class TopMenuPanel extends JPanel implements ActionListener, ItemListener
 //		 System.out.println(x + size);
 		 Font font = new Font(x,Font.PLAIN, size);
 	
-	     drawing.textEditor.setFont(font);
+	     Drawing.textEditor.setFont(font);
 	}
 
 	@Override

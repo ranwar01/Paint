@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-public  class drawing extends JPanel implements MouseListener, MouseMotionListener, KeyListener {
+public  class Drawing extends JPanel implements MouseListener, MouseMotionListener, KeyListener {
 
 	/**
 	 * 
@@ -33,7 +33,7 @@ public  class drawing extends JPanel implements MouseListener, MouseMotionListen
 	
 	Graphics2D g2d;	
 	
-	public drawing(){
+	public Drawing(){
 		setBackGround();
 		textEditor = new JTextArea();
 		textEditor.setBounds(0,0,1000,500);

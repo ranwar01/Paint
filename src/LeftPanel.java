@@ -17,7 +17,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-public class leftButtonPanel extends JPanel implements ActionListener, ChangeListener {
+public class LeftPanel extends JPanel implements ActionListener, ChangeListener {
 
 	/**
 	 * 
@@ -30,7 +30,7 @@ public class leftButtonPanel extends JPanel implements ActionListener, ChangeLis
 	public  String currentShapeName = "Line";
 	public static String text;
 	
-	public leftButtonPanel(){
+	public LeftPanel(){
 		buttons = new JButton[5];
 		slider = new JSlider();
 		
@@ -81,23 +81,23 @@ public class leftButtonPanel extends JPanel implements ActionListener, ChangeLis
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getSource().equals(buttons[0])){
-			drawing.setCurrentShape("Line");			
+			Drawing.setCurrentShape("Line");			
 		}
 		else if (e.getSource().equals(buttons[1])){
-			drawing.setCurrentShape("Rectangle");
+			Drawing.setCurrentShape("Rectangle");
 			
 		}
 		else if (e.getSource().equals(buttons[2])){
-			drawing.setCurrentShape("Circle");
+			Drawing.setCurrentShape("Circle");
 //			drawPanel.setCurrentShape("Circle");
 
 	    }
 		else if (e.getSource().equals(buttons[3])){
-			drawing.setCurrentShape("Arc");
+			Drawing.setCurrentShape("Arc");
 //			drawPanel.setCurrentShape("Arc");
 	    }
 		else if (e.getSource().equals(buttons[4])){
-			drawing.setCurrentShape("Rectangle Filled");
+			Drawing.setCurrentShape("Rectangle Filled");
 			
 	    }
 		
@@ -114,7 +114,7 @@ public class leftButtonPanel extends JPanel implements ActionListener, ChangeLis
 	public void stateChanged(ChangeEvent e) {
 		if (e.getSource().equals(slider)){
 		
-			drawing.setStrokeValue(slider.getValue());
+			Drawing.setStrokeValue(slider.getValue());
 		}
 		
 	}

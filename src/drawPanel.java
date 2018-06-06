@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-public class drawPanel extends JPanel implements MouseListener, MouseMotionListener, KeyListener {
+public class DrawPanel extends JPanel implements MouseListener, MouseMotionListener, KeyListener {
 
 	public static String  currentShape;
 	public int x, y, lastX, lastY;
@@ -34,7 +34,7 @@ public class drawPanel extends JPanel implements MouseListener, MouseMotionListe
 	Graphics2D g2d;	
 	 private BufferedImage img;
 	
-	public drawPanel(){
+	public DrawPanel(){
 //		textEditor = new JTextArea(10,1);
 //		textEditor.setEditable(true);
 //		textEditor.setLineWrap(true);
