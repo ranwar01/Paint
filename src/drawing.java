@@ -20,6 +20,7 @@ public  class Drawing extends JPanel implements MouseListener, MouseMotionListen
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	public static String  currentShape;
 	public int x, y, lastX, lastY;
 	public static Color color;
@@ -51,19 +52,19 @@ public  class Drawing extends JPanel implements MouseListener, MouseMotionListen
 //		super.addKeyListener(this);
 		this.setVisible(true);
 	}
+	
 	public  void setBackGround(){
 		this.setBackground(Color.WHITE);
 	}
 	
 	public static void setStrokeValue(int size){
-		strokeValue = size;
-
+		strokeValue = size;	
 	}
 
 	public static void setColor(Color c){
 		color = c;
-
 	}
+	
     public static Color getColor(){
 		return color;
 	}
@@ -112,6 +113,7 @@ public  class Drawing extends JPanel implements MouseListener, MouseMotionListen
 		currentShape = shape;
 		System.out.println(currentShape);
 	}
+	
 	public  String getCurrentShape(){
 		return currentShape;
 	}
@@ -144,9 +146,9 @@ public  class Drawing extends JPanel implements MouseListener, MouseMotionListen
 	}
 
 	@Override
-	public void mouseEntered(MouseEvent e) { }
+	public void mouseEntered(MouseEvent e) {}
 	@Override
-	public void mouseExited(MouseEvent e) {	}
+	public void mouseExited(MouseEvent e) {}
 	@Override
 	public void mouseMoved(MouseEvent e) {}
 	@Override
@@ -165,15 +167,11 @@ public  class Drawing extends JPanel implements MouseListener, MouseMotionListen
 //		}
 	}
 	@Override
-	public void keyReleased(KeyEvent e) {
-
-	}
+	public void keyReleased(KeyEvent e) {}
 
 	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub	
-
-	}
+	public void keyPressed(KeyEvent e) {}
+	
 	public void drawText(String text){
 	
 	 currentText += text;
